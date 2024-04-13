@@ -16,7 +16,7 @@ let user_answer = await inquirer.prompt([
     },
     {
         name: 'to',
-        message: 'Enter from currency',
+        message: 'Enter to currency',
         type: 'list',
         choices: ['USD', 'EUR', 'GBP', 'InR', 'PKR'],
     },
@@ -33,4 +33,5 @@ let toAmount = currency[usertoCurrency];
 let amount = user_answer.amount;
 let baseAmount = amount / fromAmount; // USD base currency
 let convertAmount = baseAmount * toAmount;
-console.log(convertAmount);
+let convertingAmount = Math.round(convertAmount);
+console.log(convertingAmount);

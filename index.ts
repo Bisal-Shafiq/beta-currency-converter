@@ -41,4 +41,5 @@ let toAmount = currency[usertoCurrency]
 let amount = user_answer.amount
 let baseAmount = amount / fromAmount // USD base currency
 let convertAmount = baseAmount * toAmount
-console.log(convertAmount);
+let convertingAmount: number = Math.round(convertAmount)
+console.log(convertingAmount);
